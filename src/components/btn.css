@@ -1,4 +1,33 @@
 .btn {
-    @apply px-2 py-1;
-    @apply rounded-md shadow-sm;
+    @apply relative text-pp-cream bg-pp-yellow hover:bg-pp-light-yellow font-montserrat text-2xl font-bold;
+    @apply rounded-2xl border-2 border-pp-dark-gray px-8 py-3 duration-200 whitespace-nowrap;
+    transform-style: preserve-3d;
+    paint-order: stroke fill;
+    text-shadow: 2px 2px 0 #3d3d3d;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #3d3d3d;
+}
+
+.btn:disabled {
+    @apply bg-[#D1C4AF] text-pp-dark-gray text-opacity-50;
+    -webkit-text-stroke-width: 0;
+    text-shadow: none;
+}
+
+.btn-lg {
+    @apply px-8 py-3;
+}
+
+.btn::after {
+    content: ' ';
+    @apply block absolute -left-[2px] -right-[2px];
+    @apply h-full top-3 bg-pp-red  rounded-2xl border-2 border-pp-red;
+    transform: translateZ(-80px);
+}
+
+.btn::before {
+    content: ' ';
+    @apply block absolute -left-[2px] -right-[2px];
+    @apply h-full rounded-2xl top-1.5 bg-pp-dark-gray border-2 border-pp-dark-gray;
+    transform: translateZ(-10px);
 }

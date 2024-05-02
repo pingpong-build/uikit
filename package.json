@@ -1,18 +1,22 @@
 {
-  "name": "@pp/uikit",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@pingpongbuild/uikit",
+  "version": "0.1.0",
+  "description": "PingPong UIKit",
   "main": "index.js",
   "scripts": {
+    "docs": "cd docs && npm run dev",
+    "dev": "npm run watch & npm run docs",
+    "watch": "onchange 'src/**/*' -- npm run build",
     "build:components:css": "postcss src/components/index.css -o dist/components.css",
     "build:components:js": "prejss-cli dist/components.css --format commonjs",
-    "build:components": "pnpm build:components:css && pnpm build:components:js",
+    "build:components": "npm run build:components:css && npm run build:components:js",
     "build:utilities:css": "postcss src/utilities/index.css -o dist/utilities.css",
     "build:utilities:js": "prejss-cli dist/utilities.css --format commonjs",
-    "build:utilities": "pnpm build:utilities:css && pnpm build:utilities:js"
+    "build:utilities": "npm run build:utilities:css && npm run build:utilities:js",
+    "build": "npm run build:components && npm run build:utilities"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["uikit", "tailwindcss"],
+  "author": "C9",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.19",

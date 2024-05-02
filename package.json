@@ -1,8 +1,16 @@
 {
   "name": "@pingpongbuild/uikit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "PingPong UIKit",
-  "main": "index.js",
+  "main": "src/index.js",
+  "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/**/*.js",
+    "src/index.d.ts",
+    "dist/*.js",
+    "dist/*.css"
+  ],
   "scripts": {
     "docs": "cd docs && npm run dev",
     "dev": "npm run watch & npm run docs",
@@ -15,7 +23,9 @@
     "build:utilities": "npm run build:utilities:css && npm run build:utilities:js",
     "build": "npm run build:components && npm run build:utilities"
   },
-  "keywords": ["uikit", "tailwindcss"],
+  "keywords": [
+    "uikit", "tailwindcss"
+  ],
   "author": "C9",
   "license": "ISC",
   "devDependencies": {

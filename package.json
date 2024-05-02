@@ -1,0 +1,27 @@
+{
+  "name": "@pp/uikit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:components:css": "postcss src/components/index.css -o dist/components.css",
+    "build:components:js": "prejss-cli dist/components.css --format commonjs",
+    "build:components": "pnpm build:components:css && pnpm build:components:js",
+    "build:utilities:css": "postcss src/utilities/index.css -o dist/utilities.css",
+    "build:utilities:js": "prejss-cli dist/utilities.css --format commonjs",
+    "build:utilities": "pnpm build:utilities:css && pnpm build:utilities:js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "prejss-cli": "^0.3.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
